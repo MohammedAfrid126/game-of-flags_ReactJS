@@ -1,38 +1,80 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url('../public/BG.png');
+  background-size: cover;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gameTitle{
+  color: rgb(0, 0, 0);
+}
+
+.textCenter {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fi{
+  width: 20rem;
+  line-height: 20rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.gameContainer{
+  margin: 1.8rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.scoreContainer{
+  margin: 2.8rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.answerContainer{
+  height: 1rem;
+}
+.correct{
+  color: green;
+}
+
+.incorrect{
+  color: red;
+}
+
+.btn{
+  margin: 0.5rem;
+  padding: 0.4rem;
+  background-color: rgb(0, 0, 0);
   color: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:680px) {
+  .container{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .scoreContainer{
+    margin-top: 2.8rem;
+    text-align: center;
   }
 }
